@@ -10,7 +10,7 @@ Built to be used with my [randsGenerator](https://github.com/sam-pop/randsGenera
 
 Run `node nameCapitalizer.js <input>` command to convert the input file.
 
-...`node nameCapitalizer.js example.txt` will use the `example.txt` file and output a new `converted_example.txt` file.
+`node nameCapitalizer.js example.txt` will use the `example.txt` file and output a new `converted_example.txt` file.
 
 ## What I used
 
