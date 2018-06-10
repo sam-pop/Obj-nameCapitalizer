@@ -1,7 +1,7 @@
 /*
 Obj-nameCapitalizer:
 --------------
-This simple tool takes a `.txt` file that contains objects and converts the `name` keys to be properly capitalized.
+Simple tool that takes a `.txt` file that contains objects and converts names to be properly capitalized. 
 Outputs a new converted `.txt` file.
 
 Built to be used with my randsGenerator tool (but can be used without it with minor code tweaking).
