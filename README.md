@@ -12,6 +12,6 @@ Run `node nameCapitalizer.js <input>` command to convert the input file.
 
 ...`node nameCapitalizer.js example.txt` will use the `example.txt` file and output a new `converted_example.txt` file.
 
-## What i used
+## What I used
 
 This simple tool was build using [node.JS](https://nodejs.org/).
