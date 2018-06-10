@@ -1,6 +1,6 @@
 # Obj-nameCapitalizer
 
-This simple tool takes a `.txt` file that contains objects and converts the `name` keys values to be properly capitalized.
+This simple node tool takes a `.txt` file that contains objects and properly capitalize names in it.
 
 Outputs a new converted `.txt` file.
 
