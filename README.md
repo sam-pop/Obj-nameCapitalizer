@@ -15,3 +15,6 @@ Run `node nameCapitalizer.js <input>` command to convert the input file.
 ## What I used
 
 This simple tool was build using [node.JS](https://nodejs.org/).
+
+### Notes
+Currently only supports single-quotes in the input (object containing) `.txt` file (`name: 'john doe',`).
