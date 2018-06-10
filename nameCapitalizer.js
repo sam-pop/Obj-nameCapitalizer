@@ -11,8 +11,10 @@ Built to be used with my randsGenerator tool (but can be used without it with mi
 Author: Samuel Poplovitch
 */
 
+// Dependencies
 const readline = require('readline');
 const fs = require('fs');
+
 const fileName = process.argv[2];
 
 if (fileName) {
@@ -20,36 +22,39 @@ if (fileName) {
 		input: fs.createReadStream(fileName)
 	});
 
+	// read line
 	rl.on('line', function (line) {
-			// uses 'name' as the key to the value to be changed (assuming objects containing lines of this structure: `name: 'john doe',`)
-			if (line.indexOf('name') !== -1) {
-				if (line.indexOf("'" !== -1) let vStart = line.indexOf("'");
-					else let vStart = line.indexOf("\"");
-					//splits the line to the key and values
-					let value = line.substr(vStart + 1);
-					let key = line.substr(0, line.length - value.length);
-					let vConverted = capitalizeFirstLetter(value); writeOut(key + vConverted);
-				}
-				else writeOut(line);
-			});
-	}
-	else console.log("Please enter file name as an arg");
+		// uses 'name' as the key to the value to be changed (assuming objects containing lines of this structure: `name: 'john doe',`)
+		if (line.indexOf('name') !== -1) {
+			let vStart = line.indexOf("'");
+			//splits the line to the key and values
+			let value = line.substr(vStart + 1);
+			let key = line.substr(0, line.length - value.length);
+			// capitalize first letters of value string
+			let vConverted = capitalizeFirstLetter(value);
+			// write to file
+			writeOut(key + vConverted);
+		} else writeOut(line);
+	});
+} else console.log("Please enter file name as an arg");
 
-	function capitalizeFirstLetter(str) {
-		str = str.toLowerCase();
-		var cArr = [];
-		var splitStr = str.split(" ");
-		for (var i = 0; i < splitStr.length; i++) {
-			cArr.push(splitStr[i][0].toUpperCase() + splitStr[i].slice(1));
-		}
-		return cArr.join(" ");
+// splits the string and capitalize the first letter of each word
+function capitalizeFirstLetter(str) {
+	str = str.toLowerCase();
+	var cArr = [];
+	var splitStr = str.split(" ");
+	for (var i = 0; i < splitStr.length; i++) {
+		cArr.push(splitStr[i][0].toUpperCase() + splitStr[i].slice(1));
 	}
+	return cArr.join(" ");
+}
 
-	function writeOut(line) {
-		fs.appendFileSync("./converted_" + fileName, line + '\r\n', (error) => {
-			if (error) throw error;
-		});
-	}
+// write the line to the file
+function writeOut(line) {
+	fs.appendFileSync("./converted_" + fileName, line + '\r\n', (error) => {
+		if (error) throw error;
+	});
+}
 
-	if (fileName)
-		console.log("Converting: " + fileName);
+if (fileName)
+	console.log("Converting: " + fileName);
