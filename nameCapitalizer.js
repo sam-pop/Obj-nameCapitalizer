@@ -1,8 +1,8 @@
 /*
 Obj-nameCapitalizer:
 --------------
-This simple tool takes an objects containing `.txt` file (as an arg) and converts the `name` keys to be properly capitalized.
-Outputs a new converted .txt file.
+This simple tool takes a `.txt` file that contains objects and converts the `name` keys to be properly capitalized.
+Outputs a new converted `.txt` file.
 
 Built to be used with my randsGenerator tool (but can be used without it with minor code tweaking).
 --------------
@@ -32,6 +32,7 @@ if (fileName) {
 } else console.log("Please enter file name as an arg");
 
 function capitalizeFirstLetter(str) {
+	str = str.toLowerCase();
 	var cArr = [];
 	var splitStr = str.split(" ");
 	for (var i = 0; i < splitStr.length; i++) {

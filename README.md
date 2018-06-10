@@ -1,6 +1,6 @@
 # Obj-nameCapitalizer
 
-This simple tool takes an objects containing `.txt` file (as an arg) and converts the `name` keys to be properly capitalized.
+This simple tool takes a `.txt` file that contains objects and converts the `name` keys to be properly capitalized.
 
 Outputs a new converted `.txt` file.
 
