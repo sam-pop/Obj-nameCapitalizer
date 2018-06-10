@@ -4,7 +4,7 @@ This simple tool takes a `.txt` file that contains objects and converts the `nam
 
 Outputs a new converted `.txt` file.
 
-Built to be used with my [randsGenerator](https://github.com/sam-pop/randsGenerator) tool (but can be used without it with minor code tweaking).
+Built to be used with my [randsGenerator](https://github.com/sam-pop/randsGenerator) tool (can be tweaked for any use with minor code changes).
 
 ## How to use
 
