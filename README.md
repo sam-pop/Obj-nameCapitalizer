@@ -4,7 +4,7 @@ This simple node tool takes a `.txt` file that contains objects and properly cap
 
 Outputs a new converted `.txt` file.
 
-Built to be used with my [randsGenerator](https://github.com/sam-pop/randsGenerator) tool (can be tweaked for any use with minor code changes).
+Built to be used with my [randsGenerator](https://github.com/sam-pop/randsGenerator) tool (but not only! feel free to tweak it for any use).
 
 ## Example
 
