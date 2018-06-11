@@ -8,7 +8,7 @@ Built to be used with my [randsGenerator](https://github.com/sam-pop/randsGenera
 
 ## Example
 
-Will convert the line `name: 'john doe',` to `name: 'John Doe',`.
+Will convert the line `name: 'john doe',` to `name: 'John Doe',`
 
 ## How to use
 
