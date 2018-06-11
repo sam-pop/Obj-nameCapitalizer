@@ -6,6 +6,10 @@ Outputs a new converted `.txt` file.
 
 Built to be used with my [randsGenerator](https://github.com/sam-pop/randsGenerator) tool (can be tweaked for any use with minor code changes).
 
+## Example
+
+Will convert the line `name: 'john doe',` to `name: 'John Doe',`.
+
 ## How to use
 
 Run `node nameCapitalizer.js <input>` command to convert the input file.
@@ -15,8 +19,3 @@ Run `node nameCapitalizer.js <input>` command to convert the input file.
 ## What I used
 
 This simple tool was build using [node.JS](https://nodejs.org/).
-
-### Notes
-Currently only supports single-quotes in the input (object containing) `.txt` file.
-
-For example: `name: 'john doe',`

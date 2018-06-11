@@ -4,8 +4,6 @@ Obj-nameCapitalizer:
 This simple tool takes a `.txt` file that contains objects and properly capitalize names in it. 
 Outputs a new converted `.txt` file.
 
-Only supports single-quotes in the input (object containing) `.txt` file.
-
 Built to be used with my randsGenerator tool (but can be used without it with minor code tweaking).
 --------------
 Author: Samuel Poplovitch
@@ -26,7 +24,11 @@ if (fileName) {
 	rl.on('line', function (line) {
 		// uses 'name' as the key to the value to be changed (assuming objects containing lines of this structure: `name: 'john doe',`)
 		if (line.indexOf('name') !== -1) {
-			let vStart = line.indexOf("'");
+			let vStart;
+			if (line.indexOf("\"") !== -1)
+				vStart = line.indexOf("\"");
+			if (line.indexOf("'") !== -1)
+				vStart = line.indexOf("'");
 			//splits the line to the key and values
 			let value = line.substr(vStart + 1);
 			let key = line.substr(0, line.length - value.length);
