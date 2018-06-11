@@ -13,7 +13,10 @@ Author: Samuel Poplovitch
 const readline = require('readline');
 const fs = require('fs');
 
+// Variables
 const fileName = process.argv[2];
+const KEY_NAME = 'name'; //  <--- the key of the values we will convert
+
 
 if (fileName) {
 	const rl = readline.createInterface({
@@ -22,8 +25,8 @@ if (fileName) {
 
 	// read line
 	rl.on('line', function (line) {
-		// uses 'name' as the key to the value to be changed (assuming objects containing lines of this structure: `name: 'john doe',`)
-		if (line.indexOf('name') !== -1) {
+		// uses KEY_NAME as the key to the value to be changed (assuming objects containing lines of this structure: `KEY_NAME: 'john doe',`)
+		if (line.indexOf(KEY_NAME) !== -1) {
 			let vStart;
 			if (line.indexOf("\"") !== -1)
 				vStart = line.indexOf("\"");
@@ -58,5 +61,6 @@ function writeOut(line) {
 	});
 }
 
+// console log to the user
 if (fileName)
 	console.log("Converting: " + fileName);
